@@ -1,90 +1,182 @@
 <!DOCTYPE html>
 
-<html lang="en" dir="ltr">
+<html>
     <head>
         <meta charset="utf-8">
-        <title>Day 2 of 100 days of code challenge: Rock Paper Scissors</title>
-        <style>
-            h1{
-                color: #DD3333;
-            }
-        </style>
+        <title>Day 3 of 100 days of code challenge: Memory Game</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+
     </head>
     <body>
-        <h1>Day 2 of 100 Days of Code</h1>
+        <h1>Day 3 of 100 Days of Code</h1>
         <br/>
-        <p>
-          <h1><mark>Rock Paper Scissors</mark></h1>
-        </p>
-        <h2>Computer Choice: <span id="computer-choice"></span></h2>
-        <h2>Your Choice: <span id="user-choice"></span></h2>
-        <h2>Result: <span id="result"></span></h2>
-
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-
+        <p><strong><h1>Memory Game</h1></strong><br/></p>
+        <div id="fireworksDisplay">
+                <h3>Score: <span id="result"></span></h3>
+        </div>
+        <div id="grid"></div>
+        <div id="fireworksDisplay2"></div>
         <p><strong>JS Code:</strong></p>
          <pre>
             <code>
-                /*jslint devel: true */
-                const computerChoiceDisplay = document.getElementById('computer-choice')
-                const userChoiceDisplay = document.getElementById('user-choice')
-                const resultDisplay = document.getElementById('result')
-                //pick out all the buttons by id
-                const possibleChoices = document.querySelectorAll('button')
-                //global declaration
-                let userChoice
+               /*jslint devel: true */
 
-                possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
-                    userChoice = e.target.id
-                    userChoiceDisplay.innerHTML = userChoice
-                    generateComputerChoice()
-                    getResult()
-                }))
+                        const cardArray = [
+                            {
+                                name: 'fries',
+                                img:  'images/fries.png',
+                            },
+                            {
+                                name: 'cheeseburger',
+                                img: 'images/cheeseburger.png',
+                            },
+                            {
+                                name: 'hotdog',
+                                img: 'images/hotdog.png',
+                            },
+                            {
+                                name: 'ice-cream',
+                                img: 'images/ice-cream.png',
+                            },
+                            {
+                                name: 'milkshake',
+                                img: 'images/milkshake.png',
+                            },
+                            {
+                                name: 'pizza',
+                                img: 'images/pizza.png',
+                            },
+                            {
+                                name: 'fries',
+                                img:  'images/fries.png',
+                            },
+                            {
+                                name: 'cheeseburger',
+                                img: 'images/cheeseburger.png',
+                            },
+                            {
+                                name: 'hotdog',
+                                img: 'images/hotdog.png',
+                            },
+                            {
+                                name: 'ice-cream',
+                                img: 'images/ice-cream.png',
+                            },
+                            {
+                                name: 'milkshake',
+                                img: 'images/milkshake.png',
+                            },
+                            {
+                                name: 'pizza',
+                                img: 'images/pizza.png',
+                            }
+                        ]
 
-                function generateComputerChoice(){
-                    const randomNumber = Math.floor(Math.random() * possibleChoices.length) + 1
+                        //This is a trick to sort the array randomly
+                        cardArray.sort(() => 0.5 - Math.random())
 
-                    if(randomNumber === 1){
-                        computerChoice = 'rock'
-                    }else if(randomNumber === 2){
-                        computerChoice = 'scissors'
-                    }else{
-                        computerChoice = 'paper'
-                    }
-                    computerChoiceDisplay.innerHTML = computerChoice
+                        const gridDisplay = document.querySelector('#grid')
+                        const resultDisplay = document.querySelector('#result')
+                        //empty array to push items into the array
+                        let cardsChosen = []
+                        let cardsChosenIds = []
+                        const cardsWon = []
 
-                    console.log(userChoice + ' ' + randomNumber)
-                }
+                        function createBoard() {
+                            for(let i = 0; i < cardArray.length; i++){
+                                const card = document.createElement('img')
+                                card.setAttribute('src', 'images/blank.png')
+                                card.setAttribute('data-id', i)
+                                card.addEventListener('click', flipCard)
+                                gridDisplay.appendChild(card)
+                            }
+                        }
 
-                function getResult() {
-                    if(computerChoice === userChoice){
-                        result = 'Its a draw!'
-                    }
-                    if(computerChoice === 'rock' && userChoice === "paper"){
-                        result = "Paper covers rock. You Won!!"
-                    }else if(computerChoice === 'rock' && userChoice === "scissors"){
-                        result = "Rock beats scissors. You lost :-("
-                    }
+                        createBoard()
 
-                    if(computerChoice === 'paper' && userChoice === "scissors"){
-                        result = "Scissors cut paper. You Won!!"
-                    }else if(computerChoice === 'paper' && userChoice === "rock"){
-                        result = "Paper covers rock. You lost :-("
-                    }
+                        function checkMatch(){
+                            const cards = document.querySelectorAll('img')
+                            const optionOneId = cardsChosenIds[0]
+                            const optionTwoId = cardsChosenIds[1]
 
-                    if(computerChoice === 'scissors' && userChoice === "rock"){
-                        result = "Rock beats scissors. You Won!!"
-                    }else if(computerChoice === 'scissors' && userChoice === "paper"){
-                        result = "Scissors cut paper. You lost!!"
-                    }
+                            if(optionOneId == optionTwoId){
+                                cards[optionOneId].setAttribute('src', 'images/blank.png')
+                                cards[optionTwoId].setAttribute('src', 'images/blank.png')
+                                alert('You have clicked the same image!')
+                            }else if(cardsChosen[0] === cardsChosen[1]){
+                                cards[optionOneId].setAttribute('src', 'images/white.png')
+                                cards[optionTwoId].setAttribute('src', 'images/white.png')
+                                cards[optionOneId].removeEventListener('click', flipCard)
+                                cards[optionTwoId].removeEventListener('click', flipCard)
+                                cardsWon.push(cardsChosen)
+                            }else{
+                                //if not a match then flip them back
+                                cards[optionOneId].setAttribute('src', 'images/blank.png')
+                                cards[optionTwoId].setAttribute('src', 'images/blank.png')
+                                alert('Sorry try again :-(')
+                            }
 
-                    resultDisplay.innerHTML = result
-                }
+                            resultDisplay.textContent = cardsWon.length
+                            cardsChosen = []
+                            cardsChosenIds = []
+
+                            //if all the pairs are chosen without err
+                            if(cardsWon.length === (cardArray.length/2)){
+                                const fireworksDisplay = document.querySelector('#fireworksDisplay')
+                                const fireworksDisplay2 = document.querySelector('#fireworksDisplay2')
+                                var fireworks1 = document.createElement('div')
+                                var one = document.createElement('div')
+                                var fireworks2 = document.createElement('div')
+                                var two = document.createElement('div')
+                                var fireworks3 = document.createElement('div')
+                                var fireworks4 = document.createElement('div')
+
+                                fireworks1.setAttribute('class', 'fireworks')
+                                fireworks2.setAttribute('class', 'fireworks-2')
+                                fireworks3.setAttribute('class', 'fireworks-3')
+                                fireworks4.setAttribute('class', 'fireworks-4')
+
+                                one.setAttribute('class', 'one')
+                                two.setAttribute('class', 'two')
+
+                                fireworksDisplay.appendChild(fireworks1)
+                                fireworksDisplay.appendChild(one)
+                                resultDisplay.appendChild(fireworks2)
+                                resultDisplay.appendChild(two)
+                                fireworksDisplay2.appendChild(fireworks3)
+                                fireworksDisplay2.appendChild(two)
+
+                                resultDisplay.textContent = 'Congrats you found them all!!'
+                            }
+                        }
+
+                        function flipCard(){
+                            const cardId = this.getAttribute('data-id')
+                            cardsChosen.push(cardArray[cardId].name)
+                            cardsChosenIds.push(cardId)
+                            this.setAttribute('src', cardArray[cardId].img)
+                            if(cardsChosen.length === 2){
+                                //timing event to call a function after certain amount of time has passed
+                                setTimeout(checkMatch, 500)
+
+                            }
+                        }
           </code>
          </pre>
-         <!-- Insert js code here -->
-         <script src="app.js" charset="utf-8"></script>
+         <p><h3>Day 3: May 12, 2022</h3></p>
+
+         <p><h3>**Today's Progress**</h3></p>
+         <p>I worked on a matching game tutorial and added a little animation in CSS when the player finishes the game after having guessed all the given matches. I intended to do a fireworks animation but it did not work out the way I intended.</p>
+
+         <p>**Link to this tutorial:** [Tutorial](https://www.youtube.com/watch?v=ec8vSKJuZTk)<p>
+
+         <p>**Thoughts:**</p>
+         <p>I had a very busy day at work and I almost had no time to get this done, but I know if I give myself an out this early in the game, it is likely I will not make it through. I know first hand that developing a habit takes a lot of repetition and more importantly unwavering commitment.</p>
+
+         <p>I Twitted today my progress with a screenshot of the work and pushed my changes to GitHub.</p>
+
+         <p>**Perm Link to work:** [Matching Game](https://github.com/MOZPIT/100-days-of-code/tree/Day_3)</p>
+         <p>**Live Link to work:** [Current Day](https://mozpit.github.io/100-days-of-code/)</p>
+        <script src="app.js"></script>
     </body>
 </html>
