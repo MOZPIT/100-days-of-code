@@ -44,3 +44,18 @@ I Twitted today my progress with a screenshot of the work and pushed my changes 
 
 **Perm Link to work:** [Rock Paper Scissors Game](https://github.com/MOZPIT/100-days-of-code/tree/Day_2)
 **Live Link to work:** [Current Day](https://mozpit.github.io/100-days-of-code/)
+
+### Day 3: May 12, 2022
+
+**Today's Progress**
+I worked on a matching game tutorial and added a little animation in CSS when the player finishes the game after having guessed all the given matches. I intended to do a fireworks animation but it did not work out the way I intended.  
+
+**Link to this tutorial:** [Tutorial](https://www.youtube.com/watch?v=ec8vSKJuZTk)
+
+**Thoughts:**
+I had a very busy day at work and I almost had no time to get this done, but I know if I give myself an out this early in the game, it is likely I will not make it through. I know first hand that developing a habit takes a lot of repetition and more importantly unwavering commitment.
+
+I Twitted today my progress with a screenshot of the work and pushed my changes to GitHub.
+
+**Perm Link to work:** [Matching Game](https://github.com/MOZPIT/100-days-of-code/tree/Day_2)
+**Live Link to work:** [Current Day](https://mozpit.github.io/100-days-of-code/)
