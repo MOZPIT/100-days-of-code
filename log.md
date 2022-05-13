@@ -57,5 +57,5 @@ I had a very busy day at work and I almost had no time to get this done, but I k
 
 I Twitted today my progress with a screenshot of the work and pushed my changes to GitHub.
 
-**Perm Link to work:** [Matching Game](https://github.com/MOZPIT/100-days-of-code/tree/Day_2)
+**Perm Link to work:** [Matching Game](https://github.com/MOZPIT/100-days-of-code/tree/Day_3)
 **Live Link to work:** [Current Day](https://mozpit.github.io/100-days-of-code/)
