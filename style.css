@@ -1,6 +1,7 @@
 html, body{
     background-color: #1d3557;
     color: #ffffff;
+    margin-left: 10%;
 }
 #grid {
     width: 400px;
