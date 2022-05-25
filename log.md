@@ -59,3 +59,18 @@ I Twitted today my progress with a screenshot of the work and pushed my changes 
 
 **Perm Link to work:** [Matching Game](https://github.com/MOZPIT/100-days-of-code/tree/Day_3)
 **Live Link to work:** [Current Day](https://mozpit.github.io/100-days-of-code/)
+
+### Day 4: May 25, 2022
+
+**Today's Progress**
+I worked on a matching game tutorial on creating a simple version of the game whack-a-mole. When the instructor would mention about making an improvement to the game such as replacing the blue square for a real picture of a mole, I paused the video, thought of the solution and solved it myself and then played what the instructor had to say. I was surprised and pleased I had solve the problem the same way as the instructor. This helps me retain the knowledge a lot more and forces me to think of using the current set of tools to solve a challenge.   
+
+**Link to this tutorial:** [Tutorial](https://www.youtube.com/watch?v=ec8vSKJuZTk)
+
+**Thoughts:**
+I have let 14 days pass between the last day I posted until today. Although I have failed to keep up the daily habit of this challenge, I getting myself back on track and challenge myself once more to keep up with the daily challenge this time.
+
+I Twitted today my progress with a screenshot of the work and pushed my changes to GitHub.
+
+**Perm Link to work:** [Matching Game](https://github.com/MOZPIT/100-days-of-code/tree/Day_4)
+**Live Link to work:** [Current Day](https://mozpit.github.io/100-days-of-code/)
