@@ -137,20 +137,87 @@ console.log(s.charAt(2))
 console.log(s.indexOf('l'))
 console.log(s.lastIndexOf('p'))
 
-//How old will you be in 2040?
+//Booleans
+var x = 3
+var y = 5
+var z = x > y
+console.log(z)
+
+//is the value of x euqals to the value of y?
+z = x == y
+console.log(z)
+
+//is the value of x equals to the value of y and also the same type?
+z = x === y
+console.log(z)
+
+//logical operators - Help you answer two questions instead of 1
+//AND
+z = (x < y) && (x < 0)
+console.log(z)
+//OR
+z = false || false
+console.log(z)
+//The opposite
+z = !(x > 10)
+console.log(z)
+
+//Operator Precedence => && has precence over ||
+z = false && true || true
+console.log(z)
+
+//Unary Operator
+z = x > 2 ? 'Pass' : 'Fail'
+console.log(z)
+
+//Logical Operators With Non-Booleans. When you give JS a value that is a non boolean, it will do cohersion to convert the value to a boolean.
+z = 1 && 'apple'
+console.log(z)
+
+console.log(0 == true)
+
+console.log('1' == true)
+
+z = 'banana' && 'apple'
+console.log(z)
+
+z = 'banana' || 'apple'
+console.log(z)
+
+//if the first parameter is false, it will give you the second parameter
+z = false || 'apple'
+console.log(z)
+
+var fruit
+
+console.log(fruit == false)
+z = fruit || 'apple'
+console.log(z)
+
+z = '' || 'apple'
+console.log(z)
+
+//it returns the empty string
+z = 0 && false
+console.log(z)
+
+
+//How old will you be in ??? YR?
+var futureYear = prompt("How old will you be in the year?")
 var firstname = prompt('Please enter your first name:')
-var lastname = prompt('Please enter your last name:')
 var year = prompt('Pleae enter your year of birth:')
 
-var sentence1 = 'Hello ' + firstname + ' ' + lastname + '.'
+var sentence1 = 'Hello ' + firstname + '.'
 
 console.log(year)
 
-var futureAge = 2040 - year
-var sentence2 = 'Your age in 2040 will be ' + futureAge + '.'
+var futureAge = futureYear - year
+var sentence2 = 'Your age in the year ' + futureYear + ' will be ' + futureAge + ' years young.'
 
 var result = sentence1 + '\n' + sentence2
 
 //add extra sentence to result
 result += '\nI wish a long life fulll of success and happiness!!'
+alert(result)
+
 console.log(result)

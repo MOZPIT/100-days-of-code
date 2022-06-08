@@ -74,3 +74,18 @@ I Twitted today my progress with a screenshot of the work and pushed my changes 
 
 **Perm Link to work:** [Matching Game](https://github.com/MOZPIT/100-days-of-code/tree/Day_4)
 **Live Link to work:** [Current Day](https://mozpit.github.io/100-days-of-code/)
+
+### Day 5: June 8, 2022
+
+**Today's Progress**
+I worked on variables, logical operators, operator precendece, numbers, constants and methods with the primitive and object type.   
+
+**Link to this tutorial:** [Tutorial](https://stackskills.com/p/the-2019-javascript-developer-bootcamp)
+
+**Thoughts:**
+I have been going thourhg unexpected personal issues and have not been keeping up with my daily schedule. However, I'm still committed to my goal and will continue with my progress until I make it a habit. On this work session I learned to use the prompt method and how JS handles operators, the multiple operators it supports and operator precence. 
+
+I Twitted today my progress with a screenshot of the work and pushed my changes to GitHub.
+
+**Perm Link to work:** [Matching Game](https://github.com/MOZPIT/100-days-of-code/tree/Day_5)
+**Live Link to work:** [Current Day](https://mozpit.github.io/100-days-of-code/)
