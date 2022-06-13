@@ -18,7 +18,7 @@ average = (gradeSum/5).toFixed(2)
 if(average >= 60 && passModule >= 4){
     results += "You passed " + passModule + " modules\n<br>"
     results += "Your average is " + average + "\n<br>"
-    results += "Congratulations you have passed!"       
+    results += "Congratulations you have passed!"
 }else{
     results += "You have failed " + (5-passModule) + " module(s)\n<br>"
     results += "Your average is " + average + "\n<br>"
