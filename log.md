@@ -98,7 +98,7 @@ I worked on an excercise challenge from the bootcamp course that I'm taking. The
 **Link to this tutorial:** [Tutorial](https://stackskills.com/p/the-2019-javascript-developer-bootcamp)
 
 **Thoughts:**
-I decided to optimize the code from the start and generate as little code as possible by leveraging an array and a for loop. The excercise by the instructor used many variables and used the console log method many times. I ended up writing 12 lines of code less than the instructor and my code reads much easier.    
+I decided to optimize the code from the start and generate as little code as possible by leveraging an array and a for loop. The excercise by the instructor used many variables and used the console log method many times. I ended up writing 12 lines of code less than the instructor and my code reads much easier. One really cool thing I learned today which I did not know was that when I was trying to output the results of the test on the page, I got an error message "Cannot set property 'innerHTML' of null" - it turned out that I had placed my script inside the head tag and was loading and excecuting prior to loading the html object that is supposd to display the results of the test. I moved it down before the end tag of the body and then it worked. This broadened my understanding of how the DOM works.      
 
 I Twitted today my progress with a screenshot of the work and pushed my changes to GitHub.
 
