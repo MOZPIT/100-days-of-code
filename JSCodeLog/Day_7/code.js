@@ -1,50 +1,25 @@
 /*jslint devel: true */
+//Help the cashier coding challenge. Create a cashier program that prompts for the amount due and then the amount paid by customer. Print a breakdown of the change using British pound notation.
+//Banknotes:
+//£50 - £20 - £10 - £5
+//Coins:
+//£2 - £1 - 50p - 20p -10p -5p -2p -1p
 
-var x
+var bankNotes = {50, 20, 10, 5}
+var purchase = {
+	amountDue: 0.0,
+	amountPaid: 0.0,
+	changeDue: 0.0  
+}
+purchase.amountDue = parseFloat(prompt("Amount Due:"))
+purchase.amountPaid = parseFloat(prompt("Amount Paid By Customer:"))
+purchase.changeDue = amountPaid - amountDue
 
-//undefined is a primitive types in JS
-console.log(x)
-console.log(typeof x)
+if( amountPaid >= amountDue ){
+	var fullPounds = Math.floow(changeDue)
+	
+	console.log("The change owed to the customer is " + changeDue.toFixed(2))
+}else{
+	console.log("The customer is short by " + (parseFloat(amountDue - changeDue)).toFixed(2))
+}
 
-//the value null means the variable has no value
-var y = null
-console.log(y)
-//type of y = object ==>
-console.log(typeof y)
-
-//Type Cohersion: This happens when JS converts one type to another
-//this yields a string as JS converts the 5 to a string resulting in the value of 15 when done this way.
-var z = "1" + 5
-console.log(z)
-console.log(typeof z)
-
-//This example JS converts the 1 to a number yielding -4
-z = "1" - 5
-console.log(z)
-console.log(typeof z)
-
-//multiplication does not work with strings hencew NaN -> Not a Number which is also a number
-z = "one" * 2
-console.log(z)
-console.log(typeof z)
-
-//2 multiplied by 0 = 0
-z = 2 * null
-console.log(z)
-console.log(typeof z)
-
-//It converts 0 to false which makes the comparison true
-console.log(0 == false)
-//null cannot be converted to false
-console.log(null == false)
-//undefined cannot be converted to false
-console.log(undefined == false)
-console.log("" == false)
-
-//undefined == null ==> ONly case where this is true
-console.log(undefined == null)
-console.log(null == null)
-console.log(undefined == undefined)
-
-//This will always yield false
-console.log(NaN == NaN)
