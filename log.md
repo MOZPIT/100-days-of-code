@@ -104,3 +104,18 @@ I Twitted today my progress with a screenshot of the work and pushed my changes 
 
 **Perm Link to work:** [Matching Game](https://github.com/MOZPIT/100-days-of-code/tree/Day_6)
 **Live Link to work:** [Current Day](https://mozpit.github.io/100-days-of-code/)
+
+### Day 7: June 17, 2022
+
+**Today's Progress**
+To create a cashier program algorithm that works 100% of the time without using recursion. The cashier program will prompt for the amount due and then the amount paid by the customer. It will calculate the denominations of the bills for the change due back to the customer. Print a breakdown of the change using British pound notation.
+
+**Link to this tutorial:** [Tutorial](https://stackskills.com/p/the-2019-javascript-developer-bootcamp)
+
+**Thoughts:**
+This was a good mental challenge. It was not easy for me but feel great having come up with an algoritm that works without relying on recursion.      
+
+I Twitted today my progress with a screenshot of the work and pushed my changes to GitHub.
+
+**Perm Link to work:** [Matching Game](https://github.com/MOZPIT/100-days-of-code/tree/Day_6)
+**Live Link to work:** [Current Day](https://mozpit.github.io/100-days-of-code/)
