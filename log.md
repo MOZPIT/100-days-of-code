@@ -117,5 +117,5 @@ This was a good mental challenge. It was not easy for me but feel great having c
 
 I Twitted today my progress with a screenshot of the work and pushed my changes to GitHub.
 
-**Perm Link to work:** [Matching Game](https://github.com/MOZPIT/100-days-of-code/tree/Day_6)
+**Perm Link to work:** [Matching Game](https://github.com/MOZPIT/100-days-of-code/tree/Day_6_1)
 **Live Link to work:** [Current Day](https://mozpit.github.io/100-days-of-code/)
